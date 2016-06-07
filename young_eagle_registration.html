@@ -18,19 +18,26 @@
             <fieldset>
                 <legend><span class="legendNumber">1</span>Young Eagle's Information</legend>
                 <label for="firstName">First Name</label>
-                <input id="firstName" type="text" name="userFirstName">
+                <input id="firstName" type="text" name="eagleFirstName" required>
                 <br>
                 <label for="lastName">Last Name</label>
-                <input id="lastName" type="text" name="userLastName">
+                <input id="lastName" type="text" name="eagleLastName" required>
+                <br>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="eagleGender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
                 <br>
                 <label for="midInitial">Middle Initial</label>
-                <input id="midInitial" type="text" name="userMiddleInitial">
+                <input id="midInitial" type="text" name="eagleMiddleInitial" required>
                 <br>
                 <label for="birthDate">Date of Birth</label>
-                <input id="birthDate" type="date" name="birthDate">
+                <input id="birthDate" type="date" name="eagleBirthDate" required>
                 <br>
-                <label for="prevPrtcpte">Have you flown as a Young Eagle previously?</label>
-                <input id="prevPrtcpte" type="checkbox">
+                <label>Have you flown as a Young Eagle previously?</label>
+                <input id="priorPrtcpte" type="radio" value="Yes" name="eaglePriorPrtcpte"><label for="priorPrtcpte">Yes</label>
+                <input id="notPriorPrtcpte" type="radio" value="No" name="eaglePriorPrtcpte"><label for="notPriorPrtcpte">No</label>
                 <br>
             </fieldset>
             
@@ -39,16 +46,16 @@
             <fieldset>
                 <legend><span class="legendNumber">2</span>Address</legend>
                 <label for="address">Address</label>
-                <input id="address" type="text" name="address">
+                <input id="address" type="text" name="address" required>
                 <br>
                 <label for="city">City</label>
-                <input id="city" type="text" name="city">
+                <input id="city" type="text" name="city" required>
                 <br>
                 <label for="state">State</label>
-                <input id="state" type="text" name="state">
+                <input id="state" type="text" name="state" required>
                 <br>
                 <label for="zipCode">ZIP / Postal Code</label>
-                <input id="zipCode" type="number" name="zipCode">
+                <input id="zipCode" type="number" name="zipCode" required>
             </fieldset>
             
             <br>
@@ -57,10 +64,10 @@
             <fieldset>
                 <legend><span class="legendNumber">3</span>Parent's Information</legend>
                 <label for="telephone">Telephone Number</label>
-                <input id="telephone" type="tel" name="parentTelephone">
+                <input id="telephone" type="tel" name="parentTelephone" required>
                 <br>
                 <label for="parentEmail">Parent's E-Mail Address</label>
-                <input id="parentEmail" type="email" name="parentEmail">
+                <input id="parentEmail" type="email" name="parentEmail" required>
                 <button type="submit">Sign Up</button>
             </fieldset>       
         </form>
