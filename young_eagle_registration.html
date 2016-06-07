@@ -14,40 +14,55 @@
         <h1>Young Eagles Registration</h1>
     </header>
     <main>
-        <form>
-            <label for="firstName">First Name</label>
-            <input id="firstName" type="text" name="firstName">
+        <form method="post">
+            <fieldset>
+                <legend><span class="legendNumber">1</span>Young Eagle's Information</legend>
+                <label for="firstName">First Name</label>
+                <input id="firstName" type="text" name="userFirstName">
+                <br>
+                <label for="lastName">Last Name</label>
+                <input id="lastName" type="text" name="userLastName">
+                <br>
+                <label for="midInitial">Middle Initial</label>
+                <input id="midInitial" type="text" name="userMiddleInitial">
+                <br>
+                <label for="birthDate">Date of Birth</label>
+                <input id="birthDate" type="date" name="birthDate">
+                <br>
+                <label for="prevPrtcpte">Have you flown as a Young Eagle previously?</label>
+                <input id="prevPrtcpte" type="checkbox">
+                <br>
+            </fieldset>
+            
             <br>
-            <label for="lastName">Last Name</label>
-            <input id="lastName" type="text" name="lastName">
+            
+            <fieldset>
+                <legend><span class="legendNumber">2</span>Address</legend>
+                <label for="address">Address</label>
+                <input id="address" type="text" name="address">
+                <br>
+                <label for="city">City</label>
+                <input id="city" type="text" name="city">
+                <br>
+                <label for="state">State</label>
+                <input id="state" type="text" name="state">
+                <br>
+                <label for="zipCode">ZIP / Postal Code</label>
+                <input id="zipCode" type="number" name="zipCode">
+            </fieldset>
+            
             <br>
-            <label for="midInitial">Middle Initial</label>
-            <input id="midInitial" type="text" name="middleInitial">
+            
             <br>
-            <label for="address">Address</label>
-            <input id="address" type="text" name="address">
-            <br>
-            <label for="city">City</label>
-            <input id="city" type="text" name="city">
-            <br>
-            <label for="state">State</label>
-            <input id="state" type="text" name="state">
-            <br>
-            <label for="zipCode">ZIP / Postal Code</label>
-            <input id="zipCode" type="number" name="zipCode">
-            <br>
-            <label for="birthDate">Date of Birth</label>
-            <input id="birthDate" type="date" name="birthDate">
-            <br>
-            <label for="prevPrtcpte">Have you flown as a Young Eagle previously?</label>
-            <input id="prevPrtcpte" type="checkbox">
-            <br>
-            <label for="telephone">Telephone Number</label>
-            <input id="telephone" type="tel" name="telephone">
-            <br>
-            <label for="parentEmail">Parent's E-Mail Address</label>
-            <input id="parentEmail" type="email" name="parentEmail">
-                   
+            <fieldset>
+                <legend><span class="legendNumber">3</span>Parent's Information</legend>
+                <label for="telephone">Telephone Number</label>
+                <input id="telephone" type="tel" name="parentTelephone">
+                <br>
+                <label for="parentEmail">Parent's E-Mail Address</label>
+                <input id="parentEmail" type="email" name="parentEmail">
+                <button type="submit">Sign Up</button>
+            </fieldset>       
         </form>
     </main>
 </body>
