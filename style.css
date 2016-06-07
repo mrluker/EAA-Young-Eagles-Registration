@@ -1,0 +1,80 @@
+[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+html /deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+html /deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+html /deep/ [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+html /deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+[touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+
+/* Remove default list styles */
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header, footer {
+    display: block;
+}
+
+html {
+    background-color: #e6e9e9;
+    background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
+    background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Styles */
+
+body {
+    margin: 0 auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #545454;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+}
+
+nav {
+    position: absolute;
+    height: 69px;
+    width: 100vw;
+    margin: 0;
+    display: block;
+    top: 0px;
+    width: 100%;
+    background-color: (0, 0, 0, 0);
+    background-color: #424242;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    outline-width: 0px;
+    border-width: 0px;
+}
+
+nav ul li {
+    display: inline-flex;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    float: left;
+    outline-width: 0px;
+    background-color: #212121;
+    height: 65px;
+}
+
+nav ul li img {
+    width: 65px;
+    height: 65px;
+}
