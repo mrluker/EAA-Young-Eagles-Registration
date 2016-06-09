@@ -24,8 +24,24 @@ header, footer {
 
 html {
     background-color: #e6e9e9;
-    background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
-    background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
+    background: 
+    /*    /////// Use radial gradients to get the rounded
+    /////// gradient effect in each corner
+
+    // left bottom */
+    radial-gradient(circle farthest-corner at 35% 90%, #315598, transparent 50%),
+    radial-gradient(circle farthest-corner at 0 140%, #315598, transparent 50%),
+    /* left top*/
+    radial-gradient(ellipse farthest-corner at 0 -25%, #315598, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 15% -50%, #5258cf, transparent 50%),
+    /*  right top */
+    radial-gradient(ellipse farthest-corner at 50% 0, #e33f5f, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 40% 100%, #e33f5f, transparent 50%),
+    /* right bottom */
+    radial-gradient(ellipse farthest-corner at 50% 100%, #fec564, transparent)
+
+    /* create a base coat to smooth corner gradients */
+    /*linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)*/ ;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -37,44 +53,47 @@ body {
     font-size: 16px;
     line-height: 1.5em;
     color: #545454;
-    background-color: #ffffff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    min-height: 100vh;
+/*    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);*/
+    
 }
 
 nav {
-    position: absolute;
+    display: block;
+    position: fixed;
     height: 69px;
     width: 100vw;
     margin: 0;
+    padding: 10px 10px 10px 20px;
     display: block;
     top: 0px;
     width: 100%;
-    background-color: (0, 0, 0, 0);
-    background-color: #424242;
+    background: #315598;
     z-index: 100;
-}
-
-nav ul {
-    display: flex;
-    margin: 0px;
-    width: 100%;
-    padding: 0px;
     outline-width: 0px;
     border-width: 0px;
 }
 
-nav ul li {
-    display: inline-flex;
-    width: auto;
-    margin: 0 auto;
-    padding: 0;
-    float: left;
-    outline-width: 0px;
-    background-color: #212121;
+nav a img {
+    display: inline-block;
+    width: 65px;
     height: 65px;
 }
 
-nav ul li img {
-    width: 65px;
-    height: 65px;
+main {
+    margin-top: 100px;
+    max-width: 850px;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 5px 20px #4b4b4b;
+    border-radius: 10px;
+}
+
+main h1 {
+    color: #000000;
+    opacity: 87%;
+}
+
+main form {
+
 }
