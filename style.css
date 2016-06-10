@@ -150,7 +150,13 @@ legend .legendNumber {
     font-weight: 800;
 }
 
-#parentFirstName, #parentLastName, #zipCode, #state, #eagleFirstName, #eagleLastName {
+
+.optionSelected, ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, input-placeholder {
+    color: rgba(0, 0, 0, .38 ); 
+}
+
+
+#parentFirstName, #parentLastName, #zipCode, #state, #eagleFirstName, #eagleLastName, #midInitial, #gender {
     display: inline-flex;
     position: relative;
     width: 50%;
@@ -162,7 +168,7 @@ legend .legendNumber {
     border-right: 0px;
 }
 
-#parentLastName, #eagleLastName {
+#parentLastName, #midInitial {
     border-top-right-radius: 5px;
 }
 
@@ -176,12 +182,11 @@ legend .legendNumber {
     border-top-left-radius: 5px;
 }
 
-#parentEmail, #address2, #city, #zipCode, #state {
+#parentEmail, #address2, #city, #zipCode, #state, #gender, #eagleLastName {
     border-top: 0px;
 }
 
-#state {
-    border-right: 0px;
+#state, #gender, #midInitial {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 5px;
@@ -192,7 +197,10 @@ legend .legendNumber {
     -webkit-border-bottom-right-radius: 0px;
 }
 
+#state, #eagleLastName {
+    border-right: 0px;
+}
+
 #zipCode {
     border-bottom-right-radius:  5px;
 }
-

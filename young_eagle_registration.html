@@ -92,10 +92,8 @@
                 <fieldset>
                     <legend><span class="legendNumber">3</span>Child's Information</legend>
                     <input id="eagleFirstName" type="text" name="eagleFirstName" placeholder="Child's First Name" required>
-                    <input id="eagleLastName" type="text" name="eagleLastName" placeholder="Child's Last Name" required>
-                    <label for="midInitial">Middle Initial</label>
                     <select id="midInitial" name="eagleMiddleInitial" required>
-                        <option value="" disabled selected>-</option>
+                        <option value="" disabled selected>Middle Initial</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
@@ -123,16 +121,16 @@
                         <option value="Y">Y</option>
                         <option value="Z">Z</option>
                     </select>
+                    <input id="eagleLastName" type="text" name="eagleLastName" placeholder="Child's Last Name" required>
                     <select id="gender" name="eagleGender" required>
                         <option value="" disabled selected>Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                     <br>
-                    <label for="birthDate">Date of Birth</label>
-                    <br>
+                    <label for="birthDate">Date of Birth:</label>
                     <select id="eagleMonthDOB" name="eagleBirthMonth" required>
-                        <option value="" disabled selected>Month</option>
+                        <option value="" disabled selected class="optionSelected">Month</option>
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
