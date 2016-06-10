@@ -61,11 +61,11 @@ nav {
     box-shadow: 0px 5px 20px #4b4b4b;
 }
 
-nav a img {
-    display: inline-block;
+img {
+    position: absolute;
     width: 65px;
     height: 65px;
-    border-width: 3px;
+    border-width: 5px;
     border-color: #B6B6B6;
 }
 
@@ -91,6 +91,108 @@ main h1 {
     color: rgba( 0, 0, 0, .57);
 }
 
-main form {
+form {
 
 }
+
+fieldset {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    max-width: 350px;
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+input, input:focus, select {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+input:focus {
+    border: -4px solid #03A9F4;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px 0px 0px 7px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #6A6A6B;
+}
+
+select {
+    height: 30px;
+    padding: 16px 20px;
+    border-color: #6A6A6B;
+    background-color: white;
+}
+
+legend {
+    margin: 10px 0px 5px 0px;
+    color: rgba( 0, 0, 0, .87);
+    text-decoration: underline;
+}
+
+legend .legendNumber {
+    background-color: #E9C87A;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-right: 5px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+#parentFirstName, #parentLastName, #zipCode, #state, #eagleFirstName, #eagleLastName {
+    display: inline-flex;
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+#parentFirstName, #eagleFirstName {
+    border-top-left-radius: 5px;
+    border-right: 0px;
+}
+
+#parentLastName, #eagleLastName {
+    border-top-right-radius: 5px;
+}
+
+#parentEmail {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#address1 {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#parentEmail, #address2, #city, #zipCode, #state {
+    border-top: 0px;
+}
+
+#state {
+    border-right: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 0px;
+}
+
+#zipCode {
+    border-bottom-right-radius:  5px;
+}
+
