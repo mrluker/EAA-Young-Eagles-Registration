@@ -46,16 +46,15 @@ body {
 }
 
 nav {
-    display: block;
+    display: none;
     position: fixed;
     height: 69px;
     width: 100vw;
     margin: 0;
     padding: 10px 10px 10px 20px;
-    display: block;
     top: 0px;
     width: 100%;
-    background: #315598;
+    background: #3F51B5;
     z-index: 100;
     outline-width: 0px;
     border-width: 0px;
@@ -66,10 +65,12 @@ nav a img {
     display: inline-block;
     width: 65px;
     height: 65px;
+    border-width: 3px;
+    border-color: #B6B6B6;
 }
 
 main {
-    margin: 100px auto 10px auto;
+    margin: 75px auto 10px auto;
     max-width: 850px;
     background-color: white;
     padding: 25px;
@@ -77,9 +78,17 @@ main {
     border-radius: 8px;
 }
 
+main #badge {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+}
+
 main h1 {
-    color: #000000;
-    opacity: 87%;
+    display: inline-block;
+    color: rgba( 0, 0, 0, .57);
 }
 
 main form {
