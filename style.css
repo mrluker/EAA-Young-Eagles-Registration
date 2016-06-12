@@ -12,6 +12,7 @@ html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"
 html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
 
 /* Remove default list styles */
+
 ul, ol {
     margin: 0;
     padding: 0;
@@ -24,15 +25,15 @@ header, footer {
 
 html {
     background-color: #e6e9e9;
-    background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-	background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-	background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-	background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
-	background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(123, 205, 149) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(105, 186, 209) 100%);
+	background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(123, 205, 149) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(105, 186, 209) 100%);
+	background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(123, 205, 149) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(105, 186, 209) 100%);
+	background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(123, 205, 149) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(105, 186, 209) 100%);
+	background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(123, 205, 149) 42%, transparent 82%), linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(105, 186, 209) 100%);
     -webkit-font-smoothing: antialiased;
 }
 
-/* Styles */
+/* Visual Styles */
 
 body {
     margin: 0 auto;
@@ -41,10 +42,25 @@ body {
     line-height: 1.5em;
     color: #545454;
     min-height: 100vh;
-/*    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);*/
-    
+/*    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);*/   
+}
+.darkText {
+    color: #000000;
+}
+.primaryText {
+    color: rgba(0, 0, 0, .87);
+}
+.secondaryText {
+    color: rgba(0, 0, 0, .57);
+}
+.hintText {
+    color: rgba(0, 0, 0, .38);
+}
+.divider {
+    color: rgba(0, 0, 0, .12);
 }
 
+/*
 nav {
     display: none;
     position: fixed;
@@ -60,39 +76,34 @@ nav {
     border-width: 0px;
     box-shadow: 0px 5px 20px #4b4b4b;
 }
-
-img {
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    border-width: 5px;
-    border-color: #B6B6B6;
-}
+*/
 
 main {
-    margin: 75px auto 10px auto;
-    max-width: 850px;
+    display: block;
+    margin: -30px auto 10px auto;
+    max-width: 350px;
     background-color: #F5F5F7;
     padding: 25px;
     box-shadow: 0px 5px 20px #4b4b4b;
-    border-radius: 8px;
+    border-radius: 45px 45px 8px 8px;
 }
 
-main #badge {
+#badge {
     display: inline-block;
     position: relative;
-    width: 100px;
-    height: 100px;
-    top: -50px;
+    width: 80px;
+    height: 80px;
+    margin-left: calc(50% - 190px);
+    top: 66px;
 }
 
-main h1 {
-    display: inline-block;
+main h2 {
     color: rgba( 0, 0, 0, .57);
+    margin: 11px auto 0 74px;
 }
 
 form {
-
+    margin-top: 40px;
 }
 
 fieldset {
@@ -101,17 +112,17 @@ fieldset {
     padding: 0px;
     max-width: 350px;
     border-width: 0px;
-    border-radius: 5px;
 }
 
 input, input:focus, select {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    border-collapse: collapse;
 }
 
 input:focus {
-    border: -4px solid #03A9F4;
+    border: -6px solid #03A9F4;
 }
 
 input {
@@ -126,6 +137,7 @@ input {
     border-width: 1px;
     border-style: solid;
     border-color: #6A6A6B;
+    border-collapse: collapse;
 }
 
 select {
@@ -137,19 +149,43 @@ select {
 
 legend {
     margin: 10px 0px 5px 0px;
-    color: rgba( 0, 0, 0, .87);
-    text-decoration: underline;
 }
 
-legend .legendNumber {
-    background-color: #E9C87A;
-    padding: 3px 8px;
-    border-radius: 20px;
+legend, .legendNumber {
+    padding: 3px 0px;
     margin-right: 5px;
     text-decoration: none;
     font-weight: 800;
 }
 
+button {
+    border: none;
+    color: white;
+    padding: 10px 62px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+    width: 100%;
+}
+
+input:invalid {
+  background-color: #ffdddd;
+}
+
+form:valid {
+  border: -5px solid #ddffdd;
+}
+  
+input:required:invalid {
+  border-color: #800000;
+}
+
+input:required:invalid {
+  border-color: #C00000;
+}
 
 .optionSelected, ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, input-placeholder {
     color: rgba(0, 0, 0, .38 ); 
@@ -157,8 +193,7 @@ legend .legendNumber {
 
 
 #parentFirstName, #parentLastName, #zipCode, #state, #eagleFirstName, #eagleLastName, #midInitial, #gender {
-    display: inline-flex;
-    position: relative;
+    display: inline-block;
     width: 50%;
     float: left;
 }
@@ -166,6 +201,10 @@ legend .legendNumber {
 #parentFirstName, #eagleFirstName {
     border-top-left-radius: 5px;
     border-right: 0px;
+}
+
+#eagleLastName {
+    border-bottom-left-radius: 5px;
 }
 
 #parentLastName, #midInitial {
@@ -203,4 +242,26 @@ legend .legendNumber {
 
 #zipCode {
     border-bottom-right-radius:  5px;
+}
+
+#question {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#eagleName {
+    height: 60px;
+    margin: 5px 0px 5px 0px;
+}
+
+#birthDay {
+    margin: -10px 0px 10px 0px;
+}
+
+.yesNo {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    margin-bottom: 20px;
 }
