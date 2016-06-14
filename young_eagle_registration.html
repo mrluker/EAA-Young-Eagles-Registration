@@ -9,6 +9,12 @@
         <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
         <link rel="stylesheet" href="css/signature-pad.css">
         <link rel="stylesheet" href="main.css">
+        <script>
+            function nextOne(){
+                formPageOne.style.left='-100%';
+                formPageTwo.style.left='-50%';
+            }
+        </script>
     </head>
 
     <body>
@@ -20,8 +26,8 @@
         <main>
             <h2 class="dark-text">Register a young eagle</h2>
             <hr class="headDivider">
-            <form method="post" autocomplete="on">
-                <section id="formPage1" class="formPage animated">
+            <form autocomplete="on" id="formContainer">
+                <section id="formPageOne" class="formPage animated">
                     <fieldset>
                         <legend>Parent's Information</legend>
                         <input id="parentFirstName" type="text" name="parentFirstName" placeholder="First Name" autofocus required>
@@ -88,7 +94,7 @@
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>
-                        <input id="zipCode" type="text" name="zipCode" placeholder="Zipcode" pattern="[0-9]" maxlength="5" required>
+                        <input id="zipCode" type="text" name="zipCode" placeholder="Zipcode" maxlength="5" required>
                     </fieldset>
                     <br>
                     <fieldset>
@@ -219,7 +225,7 @@
                         </div>
                     </fieldset>
                 </section>
-                <section id="formPage2" class="formPage animated">
+                <section id="formPageTwo" class="formPage animated">
                     <fieldset>
                         <div id="signature-pad" class="m-signature-pad">
                             <div class="m-signature-pad--body">
@@ -234,8 +240,8 @@
                     </fieldset>
                 </section>
                 
-                <button>Next</button>
             </form>
+            <button onclick="nextOne();">Next</button>
         </main>
         <script src="bower_components/signature_pad/signature_pad.min.js"></script>
         <script src="bower_components/signature_pad/example/js/app.js"></script>

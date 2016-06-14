@@ -13,6 +13,8 @@ html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch
 
 /* Remove default styles */
 *{
+    margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -92,12 +94,6 @@ main {
     overflow-x: hidden;
 }
 
-form section {
-    display: inline-block;
-    width: 100%;
-    float: left;
-}
-
 #badge {
     display: inline-block;
     position: relative;
@@ -119,7 +115,8 @@ main h2 {
 
 form {
     margin-top: 10px;
-    width: 100%;
+    width: 200%;
+    overflow-x: hidden;
 }
 
 fieldset {
@@ -130,6 +127,24 @@ fieldset {
     border-width: 0px;
 }
 
+form section {
+    left: 0%;
+	position: relative;
+	width: 50%;
+	opacity: 1.0;
+    display: inline-block;
+    left: 0%;
+    float: left;
+}
+
+#formPageOne {
+    
+}
+
+#formPageTwo {
+    left: 10%;
+    height: 
+}
 input, input:focus, select {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -273,7 +288,6 @@ button:hover, button:active {
 
 
 
-
 /** Animations **/
 
 .animated {
@@ -289,4 +303,6 @@ button:hover, button:active {
     -moz-perspective: 1000;
     -ms-perspective: 1000;
     perspective: 1000;
+    -webkit-transition: all .3s ease;
+	transition: all .3s ease;
 }

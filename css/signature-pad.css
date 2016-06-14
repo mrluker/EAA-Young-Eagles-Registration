@@ -28,7 +28,7 @@ body {
 	-ms-transform: skew(-3deg) rotate(-3deg);
 	-o-transform: skew(-3deg) rotate(-3deg);
 	transform: skew(-3deg) rotate(-3deg);
-	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+/*	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);*/
 }
 
 .m-signature-pad:after {
@@ -81,11 +81,14 @@ body {
   .button {
     position: absolute;
     bottom: 0;
+    width: calc(33.333333333% - 20px);
+    padding: 10px;
   }
 
 .m-signature-pad--footer
   .button.clear {
     left: 0;
+    background-color: darkred;
   }
 
 .m-signature-pad--footer
