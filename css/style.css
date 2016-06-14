@@ -11,7 +11,10 @@ html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"
 [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
 html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
 
-/* Remove default list styles */
+/* Remove default styles */
+*{
+    -webkit-font-smoothing: antialiased;
+}
 
 ul, ol {
     margin: 0;
@@ -82,10 +85,17 @@ main {
     display: block;
     margin: -30px auto 10px auto;
     max-width: 350px;
-    background-color: #F5F5F7;
+    background-color: rgba(245, 245, 247, 0.65);
     padding: 25px;
     box-shadow: 0px 5px 20px #4b4b4b;
     border-radius: 45px 45px 8px 8px;
+    overflow-x: hidden;
+}
+
+form section {
+    display: inline-block;
+    width: 100%;
+    float: left;
 }
 
 #badge {
@@ -97,13 +107,19 @@ main {
     top: 66px;
 }
 
+.headDivider{
+    margin-top: 40px;
+}
+
+
 main h2 {
     color: rgba( 0, 0, 0, .57);
     margin: 11px auto 0 74px;
 }
 
 form {
-    margin-top: 40px;
+    margin-top: 10px;
+    width: 100%;
 }
 
 fieldset {
@@ -171,21 +187,10 @@ button {
     width: 100%;
 }
 
-input:invalid {
-  background-color: #ffdddd;
+button:hover, button:active {
+    
 }
 
-form:valid {
-  border: -5px solid #ddffdd;
-}
-  
-input:required:invalid {
-  border-color: #800000;
-}
-
-input:required:invalid {
-  border-color: #C00000;
-}
 
 .optionSelected, ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, input-placeholder {
     color: rgba(0, 0, 0, .38 ); 
@@ -264,4 +269,24 @@ input:required:invalid {
     float: left;
     width: 30px;
     margin-bottom: 20px;
+}
+
+
+
+
+/** Animations **/
+
+.animated {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
 }
